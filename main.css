@@ -1,0 +1,2205 @@
+.body{
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+	
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  list-style: none;
+}
+*,
+*:before,
+*:after{
+	box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	width: auto;
+	overflow-x: hidden;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+@font-face {
+
+font-family: 'Montserrat';
+/*УКАЗАТЬ ПУТЬ ДО ШРИФТА Montserrat-Regular.ttf */
+src: url('../fonts/Montserrat-Regular.ttf');
+
+
+font-weight: normal;
+font-style: normal;
+
+}
+
+/* Импорт шрифтов */
+@import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,500i&amp;subset=cyrillic');
+@import url(http://fonts.googleapis.com/css?family=Philosopher&subset=cyrillic);
+
+ *, *:after, *:before {
+   transition: .5s ease-in-out;
+   /* добавим плавность переходов для всех элементов страницы*/
+}
+
+.hidden{
+opacity:0;
+}
+.visible{
+opacity:1;
+}
+
+ .header {
+	
+	position: absolute;
+	height: 10vh;
+	width: 100%;
+	line-height: 1;
+	background-color: #ffffff;
+	text-decoration: none;
+	z-index: 9999;
+}
+
+.container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	background-color: #ffffff;
+	z-index: 9999;
+}
+
+.logo {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.logo__link {
+	z-index: 9999;
+}
+
+.logo__img {
+	height: 10vh;
+	width: 10vh;
+	-ms-user-select: none; 
+	-moz-user-select: none; 
+	-webkit-user-select: none; 
+	user-select: none; 
+	z-index: 9999;
+}
+
+.link__2, .link__3 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	-ms-user-select: none; 
+	-moz-user-select: none; 
+	-webkit-user-select: none; 
+	user-select: none; 
+}
+
+.link__2 {
+	width: 33%;
+}
+
+.link__2 a {
+	font-family: Montserrat, sans-serif;
+	font-size: 4vh;
+	white-space: nowrap;
+	color: #000000;
+	font-style: normal;
+	text-decoration: none;
+}
+
+.link__3 {
+	width: 33%;
+}
+
+.link__3 a {
+	font-family: Montserrat, sans-serif;
+	font-size: 4vh;
+	white-space: nowrap;
+	color: #000000;
+	font-style: normal;
+	text-decoration: none;
+}
+
+.link__2 a:hover {
+	text-decoration: underline; 
+}
+
+.link__3 a:hover {
+	text-decoration: underline; 
+}
+
+.img {
+	width: 3vh;
+	height: 3vh;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+
+
+
+.f__block__1, .f__block__2 {
+  color: #fff;
+    background-color: #1B1B1B;
+	height: 15vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.f__block__1__1, .f__block__1__2, .f__block__1__3 {
+	width: 33%;
+	display: flex;
+}
+
+.f__block__1__1, .f__block__1__2, .f__block__1__3 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	color: #fff;
+}
+
+.f__block__1__1 img {
+	width: 10vh;
+	height: 10vh;
+}
+
+.f__block__1__2 img {
+	width: 10vh;
+	height: 10vh;
+}
+
+.f__block__1__3 img {
+	width: 10vh;
+	height: 10vh;
+}
+
+.f__block__1__3__h1 {
+	font-family: Montserrat Alternates; 
+	font-style: normal;
+	font-weight: normal;
+   font-size: 3.5vh;
+	-ms-user-select: none; 
+	-moz-user-select: none; 
+	-webkit-user-select: none; 
+	user-select: none; 
+}
+
+.f__block__1__3__h1:hover {
+	text-decoration: underline;
+}
+
+.f__block__2 {
+	font-family: Montserrat; 
+	font-style: normal;
+	font-weight: normal;
+   font-size: 4vh;
+	-ms-user-select: none; 
+	-moz-user-select: none; 
+	-webkit-user-select: none; 
+	user-select: none; 
+}
+
+.menu-btn{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 1vh;
+  width: 5vh;
+  height: 5vh;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 20px;
+  bottom: 2vh;
+}
+ 
+.menu-btn > span,
+.menu-btn > span::before,
+.menu-btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #616161;
+  transition-duration: .25s;
+}
+.menu-btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu-btn > span::after {
+  content: '';
+  top: 8px;
+}
+
+.menubox{
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  background-color: #ECEFF1;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+  transition-duration: .25s;
+}
+
+.menu-item {
+  display: block;
+  padding: 12px 24px;
+	font-family: Montserrat, sans-serif;
+	font-size: 3.5vh;
+	white-space: nowrap;
+	color: #000000;
+	font-style: normal;
+	text-decoration: none;
+  	transition-duration: .25s;
+  	display: flex;
+  	align-items: center;
+  	width: 100%;
+}
+.menu-item:hover {
+  background-color: #ECEFF1;
+}
+
+#menu-toggle{
+  opacity: 0;
+}
+
+#menu-toggle:checked ~ .menu-btn > span{
+  transform: rotate(45deg);
+}
+#menu-toggle:checked ~ .menu-btn > span::before{
+  top: 0;
+  transform: rotate(0);
+}
+#menu-toggle:checked ~ .menu-btn > span::after{
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu-toggle:checked ~ .menubox{
+  visibility: visible;
+  right: 0;
+}
+
+.burger-menu {
+	display: none;
+}
+
+.menu-item.category {
+	font-weight: bold;
+	font-style: italic;	
+}
+
+.menu-item.email img {
+	height: 5vh;
+}
+
+.menu-item.instagr img {
+	height: 5vh;
+}
+
+.menu-item.vkont img {
+	height: 5vh;
+}
+
+.menu-item__h1 {
+	font-size: 2vh;
+	margin-left: 5%;
+}
+
+.menubox li {
+	flex-direction: row;
+	width: 100%;
+}
+
+.mainmenubtn {
+   color: black;
+   border: none;
+   cursor: pointer;
+  	display: block;
+	font-family: Montserrat Alternates, sans-serif;
+	font-size: 3.5vh;
+	white-space: nowrap;
+	font-style: normal;
+	text-decoration: none;
+  	transition: 3s;
+  	display: flex;
+  	align-items: center;
+  	width: 100%;
+	padding: 0;
+	margin: 0;
+	padding: 12px 24px;
+	margin-top: 1vh;
+	background-color: transparent;
+	  transition-duration: .25s;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+      transition-duration: .25s;
+}
+.dropdown-child {
+    display: none;
+    background-color: #ECEFF1;
+    min-width: 200px;
+      transition-duration: .25s;
+}
+.dropdown-child__a {
+	color: black;
+	padding: 15px;
+	padding-left: 10%;
+	text-decoration: none;
+	display: block;
+	font-family: Montserrat Alternates, sans-serif;
+	font-size: 3.5vh;
+	font-style: italic;
+	 display: flex;
+    align-items: center;
+    justify-content: flex-start;
+      transition-duration: .25s;
+}
+
+.dropdown-child__a:hover {
+    font-size: 4vh;
+      transition-duration: .25s;
+}
+
+.dropdown:hover .dropdown-child {
+	display: block;
+	transition: 3s;
+	  transition-duration: .25s;
+}
+
+.ul__main {
+ list-style: none; /*убираем маркеры списка*/
+ margin: 0; /*убираем отступы*/
+ padding-left: 0; /*убираем отступы*/
+ background:#fff; /*добавляем фон всему меню*/
+ height: 10vh; /*задаем высоту*/
+ font-family: Montserrat Alternates, sans-serif;
+ font-size: 3.5vh;
+ padding: auto;
+ margin: auto;
+} 
+.maina {
+  text-decoration: none; /*убираем подчеркивание текста ссылок*/
+  background:#fff; /*добавляем фон к пункту меню*/
+  color:#000; /*меняем цвет ссылок*/
+  font-family: Montserrat Alternates, sans-serif; /*меняем шрифт*/
+  line-height:50px; /*ровняем меню по вертикали*/
+  display: block; 
+ border: none; /*добавляем бордюр справа*/
+  -moz-transition: all 0.3s 0.01s ease; /*делаем плавный переход*/
+  -o-transition: all 0.3s 0.01s ease;
+  -webkit-transition: all 0.3s 0.01s ease;
+  	  padding:0px 15px; /*добавляем отступ*/
+  	  padding-top: 2vh;
+  	  display: flex;
+  	  flex-direction: row;
+}
+.maina:hover {
+  background:#ECEFF1;/*добавляем эффект при наведении*/
+}
+
+.main__li {
+  float:left; /*Размещаем список горизонтально для реализации меню*/
+  position:relative; /*задаем позицию для позиционирования*/
+   font-size: 3.5vh;
+   z-index: 9999;
+}
+     
+    /*Стили для скрытого выпадающего меню*/
+    .main__li > .ul__main {
+        position:relative;
+        display:none;   
+    }
+     
+    /*Делаем скрытую часть видимой*/
+    .main__li:hover > .ul__main {
+        display:block; 
+        width:100%;  /*Задаем ширину выпадающего меню*/      
+    }
+   .main__li:hover > .ul__main > .main__li {
+        float:none; /*Убираем горизонтальное позиционирование*/
+    }
+
+.img__cat {
+	height: 4vh;
+	padding-left: 0;
+}
+
+.butt {
+	border: none;
+	padding-left: 10px;
+	background-color: transparent;
+
+}
+
+.butt:hover {
+	height: .2vh;
+}
+
+/* АДАПТИВ */
+
+/* 1920 на 1080 */
+
+@media screen and (max-width: 1920px) {
+	.c3__h1__1 {
+/*		margin-right: 72%;*/
+	}
+}
+
+/* 1600 на 900 */
+
+@media screen and (max-width: 1600px) {
+	.f__b1__h1__1, .f__b1__h1__2, .f__b1__h1__3 {
+		font-size: 3.2vh;
+	}
+}
+
+/* 1536 на 864 */
+
+/* 1440 на 900 */
+
+@media screen and (max-width: 1441px) {
+
+	.rectangle__3 {
+		width: 50%;
+		margin-left: 0;
+		margin-left: 10%;
+	}
+	.animate__animated.animate__fadeInUp.E {
+		width: 25%;
+		margin-right: 22%;
+		height: 30vh;
+	}
+	.animate__animated.animate__fadeInRight.M {
+		width: 30%;
+		margin-right: 10%;
+		height: 35vh;
+	}
+	.animate__animated.animate__fadeInLeft.L {
+		width: 23%;
+		height: 40vh;
+		margin-left: 20%;
+	}	
+	.animate__animated.animate__fadeInDown.P {
+		height: 40vh;
+	}
+	.c3__h1__1 {
+/*		margin-right: 70%;*/
+	}
+	.c3__h1__2 {
+/*		margin-left: 70%;*/
+	}
+	.f__block__1 {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 1320px) {
+		.c3__h1__1 {
+		font-size: 3vh;
+	}
+	.c3__h1__2 {
+		font-size: 3vh;
+	}	
+}
+
+@media screen and (max-width: 1366px) {
+	.f__b1__h1__1, .f__b1__h1__2, .f__b1__h1__3 {
+		margin-left: 1%;
+	}
+}
+
+@media screen and (max-width: 1220px) {
+	.square {
+		margin-top: 40%;
+	}
+}
+
+@media screen and (max-width: 1197px) {
+}
+
+@media screen and (max-width: 1138px) {
+	.c3__img3__link::after {
+		font-size: 6vh;
+	}
+	.c3__img2__link::after {
+		font-size: 6vh;
+	}
+	.c3__img1__link::after {
+		font-size: 6vh;
+	}
+	.bottom__txt {
+		font-size: 5vh;
+	}
+
+}
+
+/* 1024 на 600 */
+
+@media screen and (max-width: 1024px) {
+	.rectangle__4 {
+		margin-right: 50%;
+	}
+}
+
+@media screen and (max-width: 930px) {
+	.f__b1__h1__1, .f__b1__h1__2, .f__b1__h1__3 {
+		font-size: 2.8vh;
+	}
+}
+
+@media screen and (max-width: 886px) {
+
+	.f__b1__h1__1, .f__b1__h1__2, .f__b1__h1__3 {
+		font-size: 2.8vh;
+	}
+	.f__block__1__3__h1 {
+		font-size: 3.2vh;
+	}
+}
+
+@media screen and (max-width: 790px) {
+	.f__b1__h1__1, .f__b1__h1__2, .f__b1__h1__3 {
+		font-size: 2.8vh;
+	}
+	.f__block__1__3__h1 {
+		font-size: 3vh;
+	}
+	.f__block__2__h1 {
+		font-size: 3vh;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.f__b1__h1__1, .f__b1__h1__2, .f__b1__h1__3 {
+		font-size: 2.8vh;
+	}
+	.f__block__1__3__h1 {
+		font-size: 2.5vh;
+	}
+	.h2 {
+		font-size: 2.4vh;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.f__block__1__3__h1 {
+		font-size: 2vh;
+	}	
+	.f__block__1__1 img {
+    width: 6vh;
+    height: 6vh;
+	}
+	.f__block__1__2 img {
+    width: 6vh;
+    height: 6vh;
+	}
+	.f__block__1__3 img {
+    width: 6vh;
+    height: 6vh;
+	}
+}
+
+@media screen and (max-width: 532px) {
+	.main__li {
+		font-size: 2.8vh;
+	}
+	.container {
+		width: auto;
+	}
+	.ul__main {
+		display: none;
+	}
+	.link__2, .link__3 {
+		display: none;
+	}
+	.search {
+		display: none;
+	}
+	.logo {
+		justify-content: flex-start;
+	}
+	.burger-menu {
+		display: flex;
+	}
+	.menu-btn {
+		display: flex;
+		align-items: center;
+	}
+	.footer {
+		display: none;
+	}	
+	.container {
+		justify-content: flex-start;
+	}
+	.c3__h1__1, .c3__h1__2 {
+		font-size: 2.5vh;
+		font-weight: bold;
+	}
+}
+
+@media screen and (max-width: 510px) {
+	.main__li {
+		font-size: 2.8vh;
+	}
+}
+
+/*INTRO
+___________________________________________*/
+.intro{
+    display: flex;
+    width: 100%;
+    height: 140vh;
+    background: url(img/back2.png) center no-repeat;
+    background-size: cover;
+}
+.container1{
+    max-width: 1350px;
+    width: 65%;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 10vh;
+}
+.logo_button{
+    
+    width: 100%;   
+}
+.logo{
+    height: 80px;
+    width: auto;
+    display: block;
+    margin: 3% auto;
+    
+}
+
+.moba {
+
+    font-size: 55px;
+    text-align: center;
+    color: white;
+    
+    text-shadow: 1px 1px 2px black, 0 0 1em black;
+}
+.text1{
+    font-family: 'Montserrat', sans-serif;
+    max-width: 80%;
+    margin: 2% auto;
+    text-align: justify;
+    letter-spacing: 1px;
+    font-size: 32px;
+    color: white;
+}
+.games_item{
+	display: flex;
+    justify-content: space-between;
+    margin-top: 10%;
+
+	
+}
+.games_items{
+    width: 30%;
+    height: auto;
+}
+.games_logo_img{
+    height: 409px;
+    width: 306px;
+    transition: .2s ease-in-out;
+}
+.games_logo_img:hover{
+    outline: 5px solid #FD6929 ;
+    padding: 3%;
+}
+.shine-button {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 20px;
+    margin-top: 3% ;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    overflow: hidden;
+    border: 2px solid #FD6929;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    color: #FD6929;
+    transition: .2s ease-in-out;
+  }
+.shine-button:before {
+    content: "";
+    background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
+    
+    position: absolute;
+    top: -8px;
+    left: -75px;
+    transform: skewX(-45deg);
+  }
+.shine-button:hover {
+    background: #FD6929;
+    color: #fff;
+  }
+.shine-button:hover:before {
+    left: 150px;
+    transition: .5s ease-in-out;
+  }
+
+
+/*DOTA2
+_______________________________*/
+
+.d2{
+      height: 100vh;
+      width: auto;
+      background: url(img/cs2.jpg) center no-repeat;
+      background-size: cover;
+  }
+.container2{
+    max-width: 1450px;
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+  }
+.d2_name{
+    height: 63px;
+    font-size: 50px;
+    padding: 2px;
+    color: white;
+    background-color: rgba(27, 27, 27, 0.9);
+    border-radius: 15px;
+  }
+.name_items{
+    display: flex;
+    justify-content: space-between;
+    width: 69%;
+    padding-top: 8%;
+  }
+
+.d2_ball{
+    font-size: 48px;
+    color: #FFD600;
+    padding: 1%;
+}
+.d2_opis{
+    padding: 2px;
+    color: white;
+    font-size: 24px;
+    width: 60%;
+    background-color: rgba(27, 27, 27, 0.9);
+    border-radius: 15px;
+}
+.d2_2_items{
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+.button {
+  width: 35%;
+  text-decoration: none;
+  display: block;
+  font-size: 20px;
+  background: #FFD600;
+  color: #000;
+  border: 0.15rem solid #FFD600;
+  padding: 4px;
+  margin-top: 5%;
+  margin-left: 30%;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.button:hover {
+  color: #FFD600;
+}
+.button::after {
+  content: "";
+  background: #000;
+  position: absolute;
+  z-index: -1;
+  padding: 0.85em 0.75em;
+  
+}
+.button[class^="slide"]::after {
+  transition: all 0.35s;
+}
+.button[class^="slide"]:hover::after {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transition: all 0.35s;
+}
+.button.slide_from_left::after {
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  right: 100%;
+}
+
+.d2_2_data{
+  margin-top: 3%;
+  background-color: rgba(27, 27, 27, 0.9);
+  border-radius: 15px;
+  padding: 2px;
+  color: white;
+  font-size: 24px;
+  width: 32%;
+}
+.d2_2_pltf{
+  margin-top: 1%;
+  background-color: rgba(27, 27, 27, 0.9);
+  border-radius: 15px;
+  padding: 2px;
+  color: white;
+  font-size: 24px;
+  width: 26%;
+}
+.line{
+  height: 1vh;
+  background-color: #FD6929;
+}
+
+/*LOL
+_________________________*/
+
+.lol{
+    height: 100vh;
+    width: auto;
+    background: url(img/ov2.png) center no-repeat;
+    background-size: cover;
+}
+.lol_name{
+  height: 63px;
+  font-size: 50px;
+  padding: 2px;
+  color: white;
+  background-color: rgba(27, 27, 27, 0.9);
+  border-radius: 15px;
+}
+.name_items2{
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  padding-top: 8%;
+}
+
+.lol_ball{
+  font-size: 48px;
+  color: #FFD600;
+  padding: 1%;
+}
+.lol_opis{
+  padding: 5px;
+  color: white;
+  font-size: 24px;
+  width: 60%;
+  background-color: rgba(27, 27, 27, 0.9);
+  border-radius: 15px;
+}
+.lol_2_items{
+margin-top: 5%;
+display: flex;
+justify-content: space-between;
+}
+.button {
+  text-align: center;
+  width: 35%;
+  text-decoration: none;
+display: block;
+font-size: 20px;
+background: #FFD600;
+color: #000;
+border: 0.15rem solid #FFD600;
+padding: 4px;
+margin-top: 5%;
+margin-left: 30%;
+position: relative;
+z-index: 1;
+
+}
+.button:hover {
+color: #FFD600;
+}
+.button::after {
+content: "";
+background: #000;
+z-index: -1;
+padding: 0.85em 0.75em;
+
+}
+.button[class^="slide"]::after {
+transition: all 0.35s;
+}
+.button[class^="slide"]:hover::after {
+left: 0;
+right: 0;
+top: 0;
+bottom: 0;
+transition: all 0.35s;
+}
+.button.slide_from_left::after {
+top: 0;
+bottom: 0;
+left: -100%;
+right: 100%;
+}
+
+.lol_2_data{
+margin-top: 3%;
+background-color: rgba(27, 27, 27, 0.9);
+border-radius: 15px;
+padding: 2px;
+color: white;
+font-size: 24px;
+width: 18%;
+}
+.lol_2_pltf{
+margin-top: 1%;
+background-color: rgba(27, 27, 27, 0.9);
+border-radius: 15px;
+padding: 2px;
+color: white;
+font-size: 24px;
+width: 16%;
+}
+.line{
+height: 1vh;
+background-color: #FD6929;
+}
+
+/*WILD RIFT
+_________________________*/
+
+.wr{
+  height: 100vh;
+  width: auto;
+  background: url(img/hl2.jpeg) right no-repeat;
+  background-size: cover;
+}
+.wr_name{
+font-size: 47px;
+height: 55px;
+color: white;
+background-color: rgba(27, 27, 27, 0.9);
+border-radius: 10px;
+}
+.name_items3{
+display: flex;
+justify-content: space-between;
+width: 30%;
+padding-top: 8%;
+}
+
+.wr_ball{
+font-size: 46px;
+color: #FFD600;
+padding: 3px;
+}
+.wr_opis{
+padding: 5px;
+color: white;
+font-size: 24px;
+width: 60%;
+background-color: rgba(27, 27, 27, 0.9);
+border-radius: 15px;
+}
+.wr_2_items{
+margin-top: 5%;
+display: flex;
+justify-content: space-between;
+}
+.button {
+  width: 35%;
+  text-decoration: none;
+display: block;
+font-size: 20px;
+background: #FFD600;
+color: #000;
+border: 0.15rem solid #FFD600;
+padding: 4px;
+margin-top: 5%;
+margin-left: 30%;
+position: relative;
+z-index: 1;
+overflow: hidden;
+}
+.button:hover {
+color: #FFD600;
+}
+.button::after {
+content: "";
+background: #000;
+position: absolute;
+z-index: -1;
+padding: 0.85em 0.75em;
+
+}
+.button[class^="slide"]::after {
+transition: all 0.35s;
+}
+.button[class^="slide"]:hover::after {
+left: 0;
+right: 0;
+top: 0;
+bottom: 0;
+transition: all 0.35s;
+}
+.button.slide_from_left::after {
+top: 0;
+bottom: 0;
+left: -100%;
+right: 100%;
+}
+
+.wr_2_data{
+margin-top: 3%;
+background-color: rgba(27, 27, 27, 0.9);
+border-radius: 15px;
+padding: 2px;
+color: white;
+font-size: 24px;
+width: 19%;
+}
+.wr_2_pltf{
+margin-top: 1%;
+background-color: rgba(27, 27, 27, 0.9);
+border-radius: 15px;
+padding: 2px;
+color: white;
+font-size: 24px;
+width: 19%;
+} 
+
+
+/* АДАПТИВКА
+_______________________*/
+
+@media screen and (max-width: 2250px) {
+	.container1{
+    max-width: 2000px;
+  }
+  .container2{
+    max-width: 2000px;
+  }
+  }
+
+  @media screen and (max-width: 1930px) {
+    .games_logo_img{
+      height: 479px;
+      width: 376px;
+    }
+    .d2_name{
+      font-size: 60px;
+    }
+    .d2_ball{
+      font-size: 53px;
+    }
+    .d2_opis{
+      font-size: 30px;
+    }
+    .name_items{
+
+    }
+    .d2_2_right_vid{
+      width: 410px;
+      height: 300px;
+    }
+    .button{
+      font-size: 27px;
+      text-align: center;
+    }
+    .d2_2_data{
+      font-size: 32px;
+      width: 29%;
+    }
+    .d2_2_pltf{
+      font-size: 32px;
+      width: 38%;
+    }
+    .lol_name{
+      font-size: 60px;
+      height: 6%;
+    }
+    .lol_ball{
+      font-size: 53px;
+    }
+    .lol_opis{
+      font-size: 34px;
+    }
+    .lol_2_data{
+      font-size: 32px;
+      width: 27%;
+    }
+    .lol_2_pltf{
+      font-size: 32px;
+      width: 27%;
+    }
+    .wr_name{
+      font-size: 60px;
+      height: 6%;
+    }
+    .wr_ball{
+      font-size: 53px;
+    }
+    .wr_opis{
+      font-size: 32px;
+    }
+    .wr_2_data{
+      font-size: 32px;
+      width: 29%;
+    }
+    .wr_2_pltf{
+      font-size: 32px;
+      width: 37%;
+    }
+    }
+    @media screen and (max-width: 1802px) {
+      .games_logo_img{
+        height: 449px;
+        width: 346px;
+      }
+      .d2_name{
+        font-size: 57px;
+      }
+      
+      .d2_ball{
+          padding-top: 1%;
+        font-size: 50px;
+      }
+      .d2_opis{
+        font-size: 30px;
+      }
+      .d2_2_right_vid{
+        width: 390px;
+        height: 280px;
+      }
+      .button{
+        font-size: 25px;
+        text-align: center;
+      }
+      .d2_2_data{
+        font-size: 30px;
+       
+      }
+      .d2_2_pltf{
+        font-size: 30px;
+        
+      }
+      
+      .lol_name{
+        font-size: 57px;
+        height: 6%;
+      }
+      .lol_ball{
+        font-size: 50px;
+      }
+      .lol_opis{
+        font-size: 32px;
+      }
+      .lol_2_data{
+        font-size: 30px;
+        
+      }
+      .lol_2_pltf{
+        font-size: 30px;
+        
+      }
+      .wr_name{
+        font-size: 57px;
+        height: 6%;
+      }
+      
+      .wr_ball{
+        font-size: 50px;
+      }
+      .wr_opis{
+        font-size: 30px;
+      }
+      .wr_2_data{
+        font-size: 30px;
+        
+      }
+      .wr_2_pltf{
+        font-size: 30px;
+        
+      }
+      }
+
+      @media screen and (max-width: 1776px) {
+        .games_logo_img{
+          height: 429px;
+          width: 326px;
+        }
+        .d2_name{
+          font-size: 53px;
+        }
+        .d2_ball{
+          font-size: 47px;
+        }
+        .d2_opis{
+          font-size: 27px;
+        }
+        .d2_2_right_vid{
+          width: 360px;
+          height: 250px;
+        }
+        .button{
+          font-size: 21px;
+          text-align: center;
+        }
+        .d2_2_data{
+          font-size: 27px;
+          width: 29%;
+        }
+        .d2_2_pltf{
+          font-size: 27px;
+          width: 38%;
+        }
+        .lol_name{
+          font-size: 53px;
+          height: 6%;
+        }
+        .lol_ball{
+          font-size: 47px;
+        }
+        .lol_opis{
+          font-size: 29px;
+          
+        }
+        .lol_2_data{
+          font-size: 27px;
+          width: 25%;
+          
+        }
+        .lol_2_pltf{
+          font-size: 27px;
+          width: 26%;
+        }
+        .wr_name{
+          font-size: 53px;
+          height: 6%;
+        }
+        .wr_ball{
+          font-size: 47px;
+        }
+        .wr_opis{
+          font-size: 27px;
+        }
+        .wr_2_data{
+          font-size: 27px;
+            width: 29%;
+        }
+        .wr_2_pltf{
+          font-size: 27px;
+          width: 37%;
+        }
+        }
+        @media screen and (max-width: 1600px) {
+          .games_logo_img{
+            height: 409px;
+            width: 306px;
+          }
+          
+          .d2_name{
+            font-size: 49px;
+          }
+          .d2_ball{
+            font-size: 43px;
+          }
+          .d2_opis{
+            font-size: 24px;
+          }
+          .d2_2_right_vid{
+            width: 320px;
+            height: 210px;
+          }
+          .button{
+            font-size: 19px;
+            text-align: center;
+          }
+          .d2_2_data{
+            font-size: 24px;
+            width: 27%;
+          }
+          .d2_2_pltf{
+            font-size: 24px;
+            width: 33%;
+          }
+          .lol_name{
+            font-size: 49px;
+            height: 6%;
+          }
+          .lol_ball{
+            font-size: 43px;
+          }
+          .lol_opis{
+            font-size: 24px;
+          }
+          .lol_2_data{
+            font-size: 24px;
+            width: 26%;
+          }
+          .lol_2_pltf{
+            font-size: 24px;
+            width: 26%;
+          }
+          .wr_name{
+            font-size: 49px;
+            height: 6%;
+          }
+          .wr_ball{
+            font-size: 43px;
+          }
+          .wr_opis{
+            font-size: 24px;
+          }
+          .wr_2_data{
+            font-size: 24px;
+            width: 27%;
+          }
+          .wr_2_pltf{
+            font-size: 24px;
+            width: 34%;
+          }
+          }
+
+          @media screen and (max-width: 1470px) {
+            .games_logo_img{
+              height: 389px;
+              width: 286px;
+            }
+            
+            .d2_name{
+              font-size: 47px;
+            }
+            .d2_ball{
+              font-size: 41px;
+            }
+            .d2_opis{
+              font-size: 25px;
+            }
+            .d2_2_right_vid{
+              width: 320px;
+              height: 210px;
+            }
+            .button{
+              font-size: 18px;
+              text-align: center;
+            }
+            .d2_2_data{
+              font-size: 23px;
+              width: 27%;
+            }
+            .d2_2_pltf{
+              font-size: 23px;
+              width: 35%;
+            }
+            .lol_name{
+              font-size: 47px;
+              height: 6%;
+            }
+            .lol_ball{
+              font-size: 41px;
+            }
+            .lol_opis{
+              font-size: 25px;
+            }
+            .lol_2_data{
+              font-size: 23px;
+              width: 23%;
+            }
+            .lol_2_pltf{
+              font-size: 23px;
+              width: 23%;
+            }
+            .wr_name{
+              font-size: 45px;
+              height: 6%;
+            }
+            .wr_ball{
+              font-size: 41px;
+            }
+            .wr_opis{
+              font-size: 25px;
+            }
+            .wr_2_data{
+              font-size: 23px;
+              width: 29%;
+            }
+            .wr_2_pltf{
+              font-size: 23px;
+              width: 33%;
+            }
+            }
+
+
+            @media screen and (max-width: 1370px) {
+              .games_logo_img{
+                height: 339px;
+                width: 246px;
+              }
+              .shine-button {
+                left: 49%;
+              }
+              .text1{
+                font-size: 30px;
+              }
+              .d2_name{
+                font-size: 45px;
+              }
+              .d2_ball{
+                font-size: 40px;
+              }
+              .d2_opis{
+                font-size: 24px;
+              }
+              .d2_2_right_vid{
+                width: 320px;
+                height: 210px;
+              }
+              .d2_2_pltf{
+                  width: 38%;
+              }
+              .lol_name{
+                font-size: 45px;
+              }
+              .lol_ball{
+                font-size: 40px;
+              }
+              .lol_opis{
+                font-size: 24px;
+              }
+              .lol_2_data{
+                  width: 25%;
+              }
+              .lol_2_pltf{
+                  width: 27%;
+              }
+              .wr_name{
+                font-size: 43px;
+              }
+              .wr_ball{
+                font-size: 40px;
+              }
+              .wr_opis{
+                font-size: 24px;
+              }
+              .wr_2_pltf{
+                  width: 38%;
+              }
+              }
+
+              @media screen and (max-width: 1320px) {
+                .games_logo_img{
+                  height: 349px;
+                  width: 246px;
+                }
+               
+                .d2_name{
+                  font-size: 40px;
+                  height: 6%;
+                }
+                .d2_ball{
+                  font-size: 35px;
+                }
+                .d2_opis{
+                  font-size: 21px;
+                }
+                .d2_2_right_vid{
+                  width: 300px;
+                  height: 190px;
+                }
+                .button{
+                  font-size: 16px;
+                  text-align: center;
+                }
+                .d2_2_data{
+                  font-size: 20px;
+                  
+                }
+                .d2_2_pltf{
+                  font-size: 20px;
+                  
+                }
+                .lol_name{
+                  font-size: 40px;
+                }
+                .lol_ball{
+                  font-size: 35px;
+                }
+                .lol_opis{
+                  font-size: 21px;
+                }
+                .lol_2_data{
+                  font-size: 20px;
+                  width: 26%;
+                }
+                .lol_2_pltf{
+                  font-size: 20px;
+                  width: 26%;
+                }
+                .wr_name{
+                  font-size: 40px;
+                  height: 6%;
+                }
+                .wr_ball{
+                  font-size: 35px;
+                }
+                .wr_opis{
+                  font-size: 20px;
+                }
+                .wr_2_data{
+                  font-size: 20px;
+                  width: 27%;
+                }
+                .wr_2_pltf{
+                  font-size: 20px;
+                  
+                }
+                }
+
+                @media screen and (max-width: 1240px) {
+                  .games_logo_img{
+                    height: 309px;
+                    width: 206px;
+                  }
+                  .moba{
+                    font-size: 35px;
+                  }
+                  .text1{
+                    font-size: 25px;
+                  }
+                  .logo{
+                    height: 90px;
+                  }
+                  
+                  .d2_name{
+                    font-size: 34px;
+                    height: 6%;
+                  }
+                  .d2_ball{
+                    font-size: 29px;
+                  }
+                  .d2_opis{
+                    font-size: 19px;
+                  }
+                  .d2_2_right_vid{
+                    width: 260px;
+                    height: 150px;
+                  }
+                  .button{
+                    font-size: 12px;
+                    text-align: center;
+                  }
+                  .d2_2_data{
+                    font-size: 15px;
+                    width: 21%;
+                  }
+                  .d2_2_pltf{
+                    font-size: 15px;
+                    width: 24%;
+                  }
+                  .lol_name{
+                    font-size: 34px;
+                  }
+                  .lol_ball{
+                    font-size: 29px;
+                  }
+                  .lol_opis{
+                    font-size: 19px;
+                  }
+                  .lol_2_data{
+                    font-size: 15px;
+                    width: 20%;
+                  }
+                  .lol_2_pltf{
+                    font-size: 15px;
+                    width: 18%;
+                  }
+                  .wr_name{
+                    font-size: 34px;
+                    height: 6%;
+                  }
+                  .wr_ball{
+                    font-size: 29px;
+                  }
+                  .wr_opis{
+                    font-size: 17px;
+                  }
+                  .wr_2_data{
+                    font-size: 15px;
+                    width: 22%;
+                  }
+                  .wr_2_pltf{
+                    font-size: 15px;
+                    width: 22%;
+                  }
+                  }
+                  @media screen and (max-width: 1100px) {
+                    .games_logo_img{
+                      height: 299px;
+                      width: 196px;
+                    }
+                    .moba{
+                      font-size: 35px;
+                    }
+                    .text1{
+                      font-size: 25px;
+                    }
+                    .logo{
+                      height: 70px;
+                    }
+
+                    .shine-button{
+                      height: 45px;
+                      font-size: 14px;
+                    }
+                    .d2_name{
+                      font-size: 32px;
+                      height: 6%;
+                    }
+                    .d2_ball{
+                      font-size: 29px;
+                    }
+                    .d2_opis{
+                      font-size: 17px;
+                    }
+                    .d2_2_right_vid{
+                      width: 250px;
+                      height: 140px;
+                    }
+                    .button{
+                      font-size: 12px;
+                      text-align: center;
+                    }
+                    .d2_2_data{
+                      font-size: 13px;
+                      width: 21%;
+                    }
+                    .d2_2_pltf{
+                      font-size: 13px;
+                      width: 22%;
+                    }
+                    .lol_name{
+                      font-size: 32px;
+                    }
+                    .lol_ball{
+                      font-size: 29px;
+                    }
+                    .lol_opis{
+                      font-size: 17px;
+                    }
+                    .lol_2_data{
+                      font-size: 13px;
+                      width: 23%;
+                    }
+                    .lol_2_pltf{
+                      font-size: 13px;
+                      width: 22%;
+                    }
+                    .wr_name{
+                      font-size: 31px;
+                      height: 6%;
+                    }
+                    .wr_ball{
+                      font-size: 29px;
+                    }
+                    .wr_opis{
+                      font-size: 17px;
+                    }
+                    .wr_2_data{
+                      font-size: 13px;
+                      width: 23%;
+                    }
+                    .wr_2_pltf{
+                      font-size: 13px;
+                      width: 19%;
+                    }}
+                   @media screen and (max-width: 900px) {
+                      .games_logo_img{
+                        height: 239px;
+                        width: 136px;
+                      }
+                      .moba{
+                        font-size: 30px;
+                      }
+                      .text1{
+                        font-size: 20px;
+                      }
+                      .logo{
+                        height: 50px;
+                      }
+  
+                      .shine-button{
+                        height: 40px;
+                        font-size: 12px;
+                      }
+                      .d2_name{
+                        font-size: 26px;
+                        height: 6%;
+                      }
+                      .d2_ball{
+                        font-size: 20px;
+                        margin-top: 2%;
+                      }
+                      .d2_opis{
+                        font-size: 12px;
+                      }
+                      .d2_2_right_vid{
+                        width: 200px;
+                        height: 100px;
+                      }
+                      .button{
+                        font-size: 10px;
+                        text-align: center;
+                      }
+                      .d2_2_data{
+                        font-size: 11px;
+                        width: 21%;
+                      }
+                      .d2_2_pltf{
+                        font-size: 11px;
+                        width: 24%;
+                      }
+                      .lol_name{
+                        font-size: 26px;
+                      }
+                      .lol_ball{
+                        font-size: 20px;
+                      }
+                      .lol_opis{
+                        font-size: 12px;
+                      }
+                      .lol_2_data{
+                        font-size: 11px;
+                        width: 25%;
+                      }
+                      .lol_2_pltf{
+                        font-size: 11px;
+                        width: 24%;
+                      }
+                      .wr_name{
+                        font-size: 24px;
+                        height: 6%;
+                      }
+                      .wr_ball{
+                        font-size: 20px;
+                      }
+                      .wr_opis{
+                        font-size: 12px;
+                      }
+                      .wr_2_data{
+                        font-size: 11px;
+                        width: 25%;
+                      }
+                      .wr_2_pltf{
+                        font-size: 11px;
+                        width: 21%;
+                      }
+                      }
+
+                      @media screen and (max-width: 500px) {
+                        .container1{
+                          width: 80%;
+                        }
+                        .d2{
+                            height: 100vh;
+                        }
+                        .lol{
+                            height: 100vh;
+                        }
+                        .wr{
+                            height: 100vh;
+                        }
+                        .intro{
+                          height: 70vh;
+                        }
+                        .games_logo_img{
+                          height: 189px;
+                          width: 106px;
+                        }
+                        .d2_2_items{
+                          display: block;
+                          width: 100%;
+                        }
+                        .lol_2_items{
+                          display: block;
+                          width: 100%;
+                        }
+                        .wr_2_items{
+                          display: block;
+                          width: 100%;
+                        }
+                        .moba{
+                          font-size: 30px;
+                        }
+                        
+                        .text1{
+                          font-size: 12px;
+                          max-width: 95%;
+                        }
+                        .logo{
+                          height: 50px;
+                        }
+    
+                        .shine-button{
+                          height: 40px;
+                          font-size: 12px;
+                        }
+                        .name_items{
+                          width: 97%;
+                        }
+                        .d2_name{
+                          font-size: 25px;
+                          height: 6%;
+                        }
+                        .d2_ball{
+                          font-size: 20px;
+                          margin-top: 2%;
+                        }
+                        .d2_opis{
+                          font-size: 12px;
+                          width: 100%;
+                        }
+                        
+                        .d2_2_right_vid{
+                          margin: 5% 0;
+                          width: 100%;
+                          height: 150px;
+                        }
+                        .button{
+                          display: none;
+                        }
+                        .bad{
+                          display: flex;
+                          width: 100%;
+                          justify-content: space-between;
+                        }
+                        .d2_2_data{
+                          font-size: 11px;
+                          width: 36%;
+                          margin: 0;
+                        }
+                        .d2_2_pltf{
+                          font-size: 11px;
+                          width:50%;
+                          margin: 0;
+                        }
+                        .name_items2{
+                          width: 71%;
+                        }
+                        
+                        .lol_name{
+                          font-size: 25px;
+                        }
+                        .lol_ball{
+                          font-size: 20px;
+                        }
+                        .lol_opis{
+                          width: 100%;
+                          font-size: 16px;
+                        }
+                        .lol_2_data{
+                          margin-top: 0;
+                          font-size: 11px;
+                          width: 38%;
+                        }
+                        .lol_2_pltf{
+                          font-size: 11px;
+                          width: 36%;
+                          margin-top: 0;
+                        }
+                        
+                        .name_items3{
+                          width: 70%;
+                        }
+                        .wr_name{
+                          font-size: 23px;
+                          height: 6%;
+                          
+                        }
+                        .wr_ball{
+                          font-size: 20px;
+                        }
+                        .wr_opis{
+                          font-size: 10px;
+                          width: 100%;
+                        }
+                        .wr_2_data{
+                          margin-top: 0;
+                          font-size: 11px;
+                          width: 35%;
+                        }
+                        .wr_2_pltf{
+                          font-size: 11px;
+                          width: 49%;
+                          margin-top: 0;
+                        }
+                        }   
+                        @media screen and (max-width: 460px) {
+                            .d2{
+                                height: 100vh;
+                            }
+                            .lol{
+                                height: 100vh;
+                            }
+                            .wr{
+                                height: 100vh;
+                            }
+                         .intro{
+                           height: 70vh;
+                         }
+                          .games_logo_img{
+                            height: 169px;
+                            width: 106px;
+                          }
+
+                          
+
+                          .logo{
+                            height: 50px;
+                          }
+
+                          .name_items{
+                            width: 97%;
+                          }
+                          .d2_name{
+                            font-size: 30px;
+                            height: 6%;
+                          }
+                          .d2_2_right_vid{
+                            height: 190px;
+                            margin: 8% 0;
+                          }
+                          .d2_ball{
+                            font-size: 25px;
+                           margin-top: 0;
+                          }
+                          .d2_opis{
+                            font-size: 14px;
+                            width: 100%;
+                          }
+
+                          .d2_2_data{
+                            font-size: 10px;
+                            width: 42%;
+                            
+                          }
+                          .d2_2_pltf{
+                            font-size: 10px;
+                            width:50%;
+                            margin: 0;
+                          }
+                          
+                          
+                          .lol_name{
+                            font-size: 24px;
+                          }
+                          .lol_ball{
+                            font-size: 20px;
+                            
+                          }
+                          .lol_opis{
+                            width: 100%;
+                            font-size: 17px;
+                          }
+                          .lol_2_data{
+                            font-size: 10px;
+                            width: 35%;
+                          }
+                          .lol_2_pltf{
+                            font-size: 10px;
+                            width: 34%;
+                            margin-top: 0;
+                          }
+                          
+                          .name_items3{
+                            width: 70%;
+                          }
+                          .wr_name{
+                            font-size: 22px;
+                            
+                          }
+                          .wr_ball{
+                              margin: 0;
+                            font-size: 20px;
+                          }
+                          .wr_opis{
+                            font-size: 14px;
+                            width: 100%;
+                          }
+                          .wr_2_data{
+                            margin-top: 0;
+                            font-size: 10px;
+                            width: 38%;
+                          }
+                          .wr_2_pltf{
+                            margin-top: 0;
+                            font-size: 10px;
+                            width: 48%;
+                          }
+                          }  
+                          @media screen and (max-width: 380px) {
+                            .d2{
+                                height: 100vh;
+                            }
+                            .lol{
+                                height: 100vh;
+                            }
+                            .wr{
+                                height: 100vh;
+                            }
+                            .games_logo_img{
+                              height: 149px;
+                              width: 86px;
+                            }
+                            
+
+                            .logo{
+                              height: 40px;
+                            }
+  
+
+                            .d2_name{
+                              font-size: 25px;
+                              height: 6%;
+                            }
+                            .d2_2_right_vid{
+                              height: 130px;
+                            }
+                            .d2_ball{
+                              font-size: 20px;
+                              
+                            }
+                            .d2_opis{
+                              font-size: 11px;
+                              width: 100%;
+                            }
+  
+                            .d2_2_data{
+                              font-size: 10px;
+                              width: 45%;
+                            }
+                            .d2_2_pltf{
+                              margin: 0 0;
+                              font-size: 10px;
+                              width:48%;
+                            }
+
+                            .lol_name{
+                              font-size: 20px;
+                            }
+                            .lol_ball{
+                              font-size: 20px;
+                              
+                            }
+                            .lol_opis{
+
+                              font-size: 15px;
+                            }
+                            .lol_2_data{
+                              font-size: 10px;
+                              width: 45%;
+                            }
+                            .lol_2_pltf{
+                              font-size: 10px;
+                              width: 43%;
+
+                            }
+
+                            .wr_name{
+                              font-size: 18px;
+                              
+                            }
+                            .wr_ball{
+                              font-size: 17px;
+                            }
+                            .wr_opis{
+                              font-size: 10px;
+                            }
+                            .wr_2_data{
+                              font-size: 10px;
+                              width: 44%;
+                            }
+                            .wr_2_pltf{
+                              font-size: 10px;
+                              width: 50%;
+                            }
+                            }  
